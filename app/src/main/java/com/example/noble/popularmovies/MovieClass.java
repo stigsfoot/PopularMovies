@@ -6,17 +6,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+import java.net.HttpURLConnection;
 import java.util.ArrayList;
 
 
 /**
  * Created by noble on 2/17/16.
  */
+
 public class MovieClass extends BaseAdapter {
 
     // Set URL parameters (should these be private methods?)
     public String API_KEY = "API KEY GOES HERE";
     public final String BASE_URL = "http://api.themoviedb.org/3/discover/movie";
+    public HttpURLConnection urlConnection = null;
 
     // TODO Set width and height of all movie image assets once retrieved
     public int width;
